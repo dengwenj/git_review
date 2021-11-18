@@ -1,2 +1,7 @@
 git
+<<<<<<< HEAD
 在 dev 分支上做到事情，在 master 上看不到的，必须要合并master
+=======
+在 feature1 分支上做到事情，在 master 上看不到的，必须要合并
+>>>>>>> feature1
+qqq
