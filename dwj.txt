@@ -1,19 +1,19 @@
-git
-<<<<<<< HEAD
-在 dev 分支上做到事情，在 master 上看不到的，必须要合并master
-=======
-在 feature1 分支上做到事情，在 master 上看不到的，必须要合并
->>>>>>> feature1
-分支管理策略
-bug分支
-ddddddddd
-
-今天是 2021年11月
-<<<<<<< HEAD
-修改了 fix bug
-=======
-今天很开心，是我们认识的第100天,最近我过得很好，不知道你过的怎样
->>>>>>> feature/1111-dwj
-测试
-nihao
-ceshi 
+git pull 拉取合并代码
+git fetch origin master 将远程的代码拉取下来
+git merge origin master  合并代码到当前分支
+git stauts  查看状态
+git branch  查看所有的本地分支
+git branch -a 查看本地和远程分支
+git branch -d dwj 删除本地分支
+git checkout dwj 切换到 dwj 分支
+git checkout -b dwj 或者 git switch -c dwj 创建并切换到这个分支上
+git checkout -b dwj origin/dwj 在本地创建和远程分支对应的分支
+git add . 提交所有本地工作区的到暂存区
+git commit -m '注释' 提交暂存区到版本库里面
+git push 推送到远端
+git log --oneline 查看当前分支上的 commit 记录
+git reset 回退版本
+git reset --hard HEAD^ 回退到上一个版本
+git reset --hard cimmit_id 回到指定的版本库
+git checkout -- 文件名 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时
+git reset HEAD 文件名  当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，在执行上面的一句
