@@ -1,4 +1,4 @@
-廖雪峰 Git 教程
+### 廖雪峰 Git 教程
 
    1.  Git的优势不单是不必联网这么简单，Git极其强大的分支管理
 
@@ -206,7 +206,48 @@ git stash  当你没有写完不想提交，可以用这个，存储起来，在
 开发一个新feature，最好新建一个分支；
 
 如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。
+
+版本回退（git reset --hard hash值、git reflog 查看命令历史）
+
+git diff (查看未暂存的修改)
+git diff --cache （查看未提交的暂存）
 ```
+
+**拉取远程**
+
+```
+将远程主机 origin 的 master 分支拉取过来，与本地的 dev 分支合并:
+  git pull origin master:dev
+  
+如果远程分支是与当前分支合并，则冒号后面的部分可以省略
+  git pull origin master
+```
+
+**git fetch和git pull都可以将远端仓库更新至本地那么他们之间有何区别?**
+
+```
+git pull = git fetch + git merge
+```
+
+```
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+```
+
+```
+查看远程库信息，使用git remote -v；
+
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+
+从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突
+```
+
+
 
 
 
