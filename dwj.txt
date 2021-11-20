@@ -1,6 +1,6 @@
 git pull 拉取合并代码
 git fetch origin master 将远程的代码拉取下来
-git merge origin master  合并代码到当前分支
+git merge origin/master  合并代码到当前分支，在本地分支上合并远程分支
 git stauts  查看状态
 git branch  查看所有的本地分支
 git branch -a 查看本地和远程分支
@@ -14,6 +14,14 @@ git push 推送到远端
 git log --oneline 查看当前分支上的 commit 记录
 git reset 回退版本
 git reset --hard HEAD^ 回退到上一个版本
-git reset --hard cimmit_id 回到指定的版本库
+git reset --hard cimmit_id 回到指定的版本库 ！！！！！想怎么跳就怎样跳 知道 hash 值就行了
 git checkout -- 文件名 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时
 git reset HEAD 文件名  当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，在执行上面的一句
+git reflog 查看
+git push origin dwj（分支名）把本地分支推送到远程分支
+git fetch 取回所有分支的更新，如果只想要取回特定分支的更新，可以指定分支名：git fetch 远程主机名(origin) 分支名(master)
+git branch -r 可以查看远程的分支
+git branch -a 可以查看所有分支
+git clone 地址值  克隆到本地
+git checkout -b xd origin/dwj 这个意思就是远程 dwj 分支上创建并切换 xd 分支，
+有个 xd 这个分支 push 的话要这样用  git push origin HEAD:dwj 这样 push 的话就直接在dwj分支上看到了 
