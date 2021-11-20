@@ -1,3 +1,4 @@
 测试
 xd
 看下怎样 push.
+git push --set-upstream origin dwj这样执行了以后就可以只用git push 了
